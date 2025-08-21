@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Homepage</h1>
+    <!-- To create a link in HTML, we use the anchor element. An anchor element is defined by wrapping
+  the text or another HTML element we want to be a link with an <a> tag. -->
+    <a href="https://www.theodinproject.com/about">About The Odin Project</a>
+    <!-- The method shown above opens links in the same tab as the webpage containing them. This is the default 
+     behaviour of most browsers and it can be changed relatively easily. All we need is another 
+     attribute: the target attribute.
+
+     While href specifies the destination link, target specifies where the linked resource will 
+     be opened. If it is not present, then, by default, it will take on the _self value which 
+     opens the link in the current tab. To open the link in a new tab or window (depends on 
+     browser settings) you can set it to _blank as follows: -->
+    <a href="https://www.theodinproject.com/about" target="_blank" rel="noopener noreferrer">About The Odin Project</a>
+    <!-- You may have noticed that we snuck in the rel attribute above. This attribute is used to 
+     describe the relation between the current page and the linked document.
+
+     noopener: The noopener value of the rel attribute ensures that a link opened in a new tab 
+     or window cannot interact with or access the original page. Without it, the new page can 
+     use JavaScript to manipulate the original page, which poses a security risk. 
+     
+     In this code: target=”_blank”: opens the link in a new tab. rel=”noopener”: prevents the new 
+     tab from accessing the original page, ensuring security. Without noopener, the new tab could 
+     use JavaScript to interact with the original page, which is unsafe.
+
+     noreferrer: The noreferrer value of the rel attribute provides both privacy and security. 
+     It prevents the new page from knowing where the user came from (hiding the referrer) and 
+     also includes the behavior of noopener, preventing the new page from accessing the original 
+     page.
+
+     Why do we need this added behaviour for opening links in new tabs? Security reasons. The 
+     prevention of access that is caused by noopener prevents phishing attacks where the opened 
+     link may change the original webpage to a different one to trick users. This is referred to 
+     as tabnabbing. Adding the noreferrer value can be done if you wish to not let the opened 
+     link know that your webpage links to it.
+
+     Note that you may be fine if you forget to add rel="noopener noreferrer" since more recent 
+     versions of browsers provide security if only target="_blank" is present. Nevertheless, in 
+     line with good coding practices and to err on the side of caution, it is recommended to 
+     always pair a target="_blank" with a rel="noopener noreferrer".
+     
+     -->
+    <!-- Absolute link  -->
+
+    <a href="https://www.theodinproject.com/about">About The Odin Project</a>
+
+    <!-- Relative link -->
+
+    <a href="./pages/about.html">About</a>
+
+    <!-- images -->
+
+    <img src="./images/dog.jpg">
+
+    <!-- Images you use should be free for your intended purpose
+
+         There are many free images available but make sure to give credit to the creator of the image in 
+         your project.
+
+         An easy way to provide credit is to include the creator’s name and contact info in a README file 
+         in your repository, or give attribution (https://support.freepik.com/s/article/Attribution-How-when-and-where?language=en_US).
+
+         To find them - Google images and in image results -> Tools -> Usage rights -> “Creative Commons”. 
+         Choose & click on a image and click license details.
+
+         We recommend that you always review the license requirements of any images you want to use. -->
+
+     <img src="https://www.theodinproject.com/mstile-310x310.png" alt="The Odin Project Logo">
+
+     <!-- The alt attribute is used to describe an image. It will be used in place of the image if it cannot 
+      be loaded. It is also used with screen readers to describe what the image is to visually impaired users. -->
+     <!--  -->
+</body>
+
+</html>
